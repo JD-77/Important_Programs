@@ -30,6 +30,10 @@ public class Pascal_Trangle
         Pascal_Trangle p=new Pascal_Trangle();
         //p.pass(5);
        // p.diamondPTR(10);
+        
+        for (int i = 0; i < a.length; i++) {
+			System.out.print(" "+a[i]);
+		}
         p.removeDUP(a);
         
     }
@@ -43,8 +47,8 @@ public class Pascal_Trangle
             {
                 if(arr[i]==arr[j])
                 {   
-                    System.out.println("Duplicate is "+arr[i]);
-                    co[j]=arr[len-1];
+                    System.out.println("\nDuplicate is "+arr[i]);
+                    arr[j]=arr[len-1];
                 
                 j--;
                 len--;

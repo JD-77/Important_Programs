@@ -34,7 +34,7 @@ public class CollArryList1
             Collections.shuffle(al);
             System.out.println("al "+al);
             }
-            Thread.sleep(1000);
+            
         }
          catch(Exception e)
          {

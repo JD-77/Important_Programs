@@ -12,7 +12,7 @@ class TestC
         x=a+2;
     }
 }
-public class Test
+public class Test1
 {
     public static void main(String ar[])
     {
