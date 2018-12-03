@@ -1,6 +1,7 @@
 
 
 import java.util.HashSet;
+import java.util.Hashtable;
 
 /*
  *
@@ -132,12 +133,10 @@ import java.util.HashSet;
  * 				*	if Object has same Content the Bucket should be same
  * 
  * 				WHAT IS HASH COLLESION
- *  						
  *  				Tow or more Object store in same bucket that time Hash Collesion condn. comes
  * 
  *
- * P4) 
- * 					consider that if two unequal objects can have same hashcode value, how two different objects will be stored in same bucket.
+ * P4) 				consider that if two unequal objects can have same hashcode value, how two different objects will be stored in same bucket.
  * 					in Entry class had an attribute “next”. This attribute always points to next object in chain. This is exactly the behavior
  * 					 of LinkedList. So, in case of collision, Entry objects are stored in LinkedList form. When an Entry object needs to be stored in 
  * 					particular index, HashMap checks whether there is already an entry?? 
@@ -167,24 +166,20 @@ public class CollectionSet1{
 	{
 		Student s1=new Student(1,"z",90.23);			//101
 		Student s2=new Student(2,"x",89.505);			//102
-		Student s3=new Student(1,"a",2.63);			//103
+		Student s3=new Student(1,"a",2.63);				//103
 		Student s4=new Student(1,"b",10.2552);			//112
-		
-		
+
 		HashSet<Student> set=new HashSet<>();
-		
 		set.add(s1);
 		set.add(s2);
 		set.add(s3);
 		set.add(s4);
 		
 		System.out.println(""+set.size());
-
 		
 		for(int i=101;i<=104;i++)
 		{
 			System.out.println(i+" add of Bucket "+(i%10));
 		}
 	}
-
 }
